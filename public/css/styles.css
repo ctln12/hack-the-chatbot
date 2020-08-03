@@ -8,7 +8,7 @@ html {
   margin: 0;
   padding: 0;
   font-size: 18px;
-  background-color: #FFF;
+  background-color: #DBF1FF;
   font-family: "helvetica", sans-serif;
 }
 
@@ -16,11 +16,31 @@ html {
   position: relative;
   max-width: 1000px;
   margin: 0 auto;
+  height: 430px;
 }
 .wrapper:after {
   content: "";
   display: table;
   clear: both;
+}
+.wrapper .header {
+  display: flex;
+  align-items: center;
+}
+.wrapper .header .dinobot {
+  width: 150px;
+}
+.wrapper .header .title {
+  margin: 0 auto;
+  color: #2E5593;;
+}
+.wrapper .powered_by {
+  font-size: 10px;
+  color: #666;
+}
+.wrapper .powered_by a {
+  text-decoration: none;
+  color: #666;
 }
 
 .box {
@@ -41,6 +61,14 @@ html {
 
 footer {
   text-align: center;
+  background-color: white;
+}
+footer #messenger_input {
+  border-top: 1px solid #2E5593;
+  color: #2E5593;
+}
+footer #messenger_input::placeholder {
+  color: #4f668b;
 }
 
 .hero {
@@ -121,14 +149,12 @@ a.button:hover {
 
 /* chat client */
 #message_window {
-  background: #FFFFFF;
-  border-left: 1px solid #CCC;
-  border-right: 1px solid #CCC;
+  background: white;
   /*height: 500px;
   width: 320px;*/
   height: 100%;
-  width: 100%;
-  /*margin: 2rem auto;*/
+  width: 85%;
+  /* margin: 2rem auto; */
   display: flex;
   flex-direction: column;
   font-family: "helvetica", sans-serif;
@@ -152,22 +178,6 @@ a.button:hover {
   padding: 0.25rem;
   display: block;
 }
-#message_window .powered_by {
-  flex-shrink: 0;
-  text-align: center;
-  border-bottom: 1px solid #CCC;
-  font-size: 14px;
-  padding: 0.25rem;
-  color: #666;
-}
-#message_window .powered_by a {
-  text-decoration: none;
-  color: #666;
-}
-#message_window .powered_by img {
-  position: relative;
-  top: 2px;
-}
 #message_window section {
   flex-grow: 1;
   flex-direction: column-reverse;
@@ -179,7 +189,7 @@ a.button:hover {
   clear: both;
 }
 #message_window footer {
-  border-top: 1px solid #CCC;
+  border-top: 1px solid #2E5593;
   padding: 0.25rem;
 }
 #message_window footer input[type=text] {
@@ -207,8 +217,8 @@ a.button:hover {
 #message_window .message {
   font-size: 14px;
   padding: 0.5rem;
-  background: #F0F0F0;
-  color: #333;
+  background: #DBF1FF;
+  color: #2E5593;
   border-radius: 5px;
   width: auto;
   display: inline-block;
@@ -247,7 +257,7 @@ a.button:hover {
 }
 #message_window .message.outgoing {
   float: right;
-  background: #a795ef;
+  background: #2E5593;
   color: white;
 }
 #message_window #message_replies {
