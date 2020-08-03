@@ -16,7 +16,7 @@ html {
   position: relative;
   max-width: 1000px;
   margin: 0 auto;
-  height: 430px;
+  height: 500px;
 }
 .wrapper:after {
   content: "";
